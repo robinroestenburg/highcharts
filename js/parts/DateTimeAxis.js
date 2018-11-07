@@ -64,7 +64,7 @@ Axis.prototype.getTimeTicks = function (normalizedInterval, min, max, startOfWee
 
 		if (interval >= timeUnits.day) { // day
 			minDate[Date.hcSetDate](interval >= timeUnits.month ? 1 :
-				count * Math.floor(minDate[Date.hcGetDate]() / count));
+				Math.ceil(1, count * Math.floor(minDate[Date.hcGetDate]() / count)));
 		}
 
 		if (interval >= timeUnits.month) { // month
